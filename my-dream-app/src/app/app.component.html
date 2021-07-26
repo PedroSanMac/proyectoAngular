@@ -25,7 +25,7 @@
 
 <app-hello-word>Aqui</app-hello-word>
 
-<div class="blank">
+<div class="black">
   <h1>{{title}}</h1>
 </div>
 
@@ -37,6 +37,11 @@
 <button (click)="sayHello()">Hazme click</button>
 
 <h1>Desde app.component</h1>
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser>
+  <button>Agregar Usuario</button>
+</form>
+
 <ul>
   <li *ngFor="let user of users">
     {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
