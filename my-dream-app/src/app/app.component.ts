@@ -27,6 +27,6 @@ export class AppComponent {
   }
 
   showhobbies() {
-    return true;
+    return this.showHobbies;
   }
 }
