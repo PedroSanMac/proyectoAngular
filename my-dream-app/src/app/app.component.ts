@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  users = ['ryan','joe','cameron','jhon'];
+  activated = false;
+  
+
   title = 'my-dream-app';
   name : string;
   email;// = "psanchezm@unsa.edu.pe";
