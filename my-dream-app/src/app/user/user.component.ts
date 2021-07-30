@@ -16,5 +16,5 @@ export class UserComponent implements OnInit {
   sayhello(nameUser:any){
     alert("Hola "+nameUser);
   }
-
+  
 }
