@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,24 @@ export class AppComponent {
   
 
   title = 'my-dream-app';
-  //name : string;
-  email;// = "psanchezm@unsa.edu.pe";
-  webpage : string;
   hobbies : string[];
   showHobbies : boolean;
+  webpage : string;
+  email;
+  //name : string;
+  /*// = "psanchezm@unsa.edu.pe";
+  
+  
 
-  constructor() {
+  /*constructor() {
+    
+    
+  }*/
+
+  constructor(private dataService: DataService){
+    this.dataService.getData().subscribe(data =>{
+      console.log(data);
+    })
     console.log("Constructor trabajando...");
     this.name = "Pedro";
     this.email = "psanchezm@unsa.edu.pe";
