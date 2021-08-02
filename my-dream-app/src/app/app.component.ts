@@ -9,6 +9,7 @@ import { DataService } from './data.service';
 export class AppComponent {
   name : string = "ASdasd";
   age :number = 40;
+  posts = [] as any;
 
   users = ['ryan','joe','cameron','jhon'];
   activated = false;
@@ -19,6 +20,7 @@ export class AppComponent {
   showHobbies : boolean;
   webpage : string;
   email;
+  
   //name : string;
   /*// = "psanchezm@unsa.edu.pe";
   
@@ -28,10 +30,10 @@ export class AppComponent {
     
     
   }*/
-
   constructor(private dataService: DataService){
     this.dataService.getData().subscribe(data =>{
-      console.log(data);
+      //console.log(data);
+      this.posts = data;
     })
     console.log("Constructor trabajando...");
     this.name = "Pedro";
